@@ -1,0 +1,24 @@
+management:
+  security:
+    enabled: false
+security:
+  basic:
+    enabled: false
+
+
+---
+
+spring:
+  profiles: default
+  jpa:
+    database: HSQL
+    hibernate:
+      ddl-auto: create-drop
+
+---
+
+spring:
+  profiles: cloud
+  jpa:
+    hibernate:
+      ddl-auto: update
